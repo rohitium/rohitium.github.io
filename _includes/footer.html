@@ -3,50 +3,33 @@
   
     <div class="wrapper">
       <div class="footer-col-wrapper">
+        
         <div class="footer-col">
-          <p class="feed-subscribe">
-            <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
-              <!-- RSS Icon Snippet from Minima -->
-              <svg class="svg-icon orange"> ... </svg>
-              <span>Subscribe</span>
-            </a>
-          </p>
-  
-          <!-- Only display these if site.author is defined -->
           {% if site.author %}
             <ul class="contact-list">
               {% if site.author.name %}
                 <li class="p-name">{{ site.author.name }}</li>
               {% endif %}
-              {% if site.author.position %}
-                <li>{{ site.author.position }}</li>
-              {% endif %}
-              {% if site.author.affiliation %}
-                <li>{{ site.author.affiliation }}</li>
-              {% endif %}
+              {%- if site.author.position -%}
+              {%- endif -%}
+              {%- if site.author.affiliation -%}
+              {%- endif -%}
               {% if site.author.email %}
                 <li>
                   <a class="u-email" href="mailto:{{ site.author.email }}">
                     {{ site.author.email }}
                   </a>
                 </li>
-              {% endif %}
+              {%- endif -%}
             </ul>
           {% endif %}
         </div>
-  
+
         <div class="footer-col">
-          <!-- Display site.description if you want -->
-          {% if site.description %}
-            <p>{{ site.description | escape }}</p>
-          {% endif %}
+            <p>&copy; 2025</p>
         </div>
+
       </div>
-  
-      <div class="social-links">
-        {%- include social.html -%}
-      </div>
-  
     </div>
   </footer>
   
