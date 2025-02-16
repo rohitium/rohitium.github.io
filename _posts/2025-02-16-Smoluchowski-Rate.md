@@ -6,7 +6,7 @@ layout: post
 
 # A Single Molecule View of Diffusion-Limited Bimolecular Association
 
-The first step of biomolecular communication is the binding of two molecules, e.g., a transcription factor binding to the promoter sequence of the target gene or a drug binding to its target protein. Especially from the drug design point of view, it is useful to optimize the structure of the drug molecule such that this binding process is fast, specific, and robust [1]. Moreover, the rate of such a binding process, also called the "on"-rate and denoted as \(k_{\text{on}}\), is commonly used to parameterize pathway models for cell signaling cascades [2]. Such pathway models, in turn, act as cost-effective tools for _in silico_ drug screening and target identification and prioritization [3].
+The first step of biomolecular communication is the binding of two molecules, e.g., a transcription factor binding to the promoter sequence of the target gene or a drug binding to its target protein. Especially from the drug design point of view, it is useful to optimize the structure of the drug molecule such that this binding process is fast, specific, and robust [1]. Moreover, the rate of such a binding process, also called the "on"-rate and denoted as \(k_\text{on}\), is commonly used to parameterize pathway models for cell signaling cascades [2]. Such pathway models, in turn, act as cost-effective tools for _in silico_ drug screening and target identification and prioritization [3].
 
 ## The Encounter Complex (EC)
 
