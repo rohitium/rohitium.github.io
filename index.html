@@ -3,7 +3,7 @@ layout: default
 title: "Home"
 ---
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -134,50 +134,50 @@ title: "Home"
 </head>
 
 <body>
-  <!-- <header>
+  <header>
     <h1 class="site-title"><a href="/">Home</a></h1>
   </header> -->
 
-  <div class="profile-section">
-    <img class="profile-pic" src="assets/linkedIn-picFull.jpeg" alt="LinkedIn pic" />
-    <div class="header-info">
-      <h1>Rohit Satija, PhD</h1>
-      <h2>Computational Biologist</h2>
-      <h2>AI and Data Intelligence Team</h2>
-      <h2>Pivotal Life Sciences</h2>
-    </div>
+<div class="profile-section">
+  <img class="profile-pic" src="assets/linkedIn-picFull.jpeg" alt="LinkedIn pic" />
+  <div class="header-info">
+    <h1>Rohit Satija, PhD</h1>
+    <h2>Computational Biologist</h2>
+    <h2>AI and Data Intelligence Team</h2>
+    <h2>Pivotal Life Sciences</h2>
   </div>
+</div>
 
-  <section class="social-links">
-    <a href="https://www.linkedin.com/in/rohit-satija/" aria-label="LinkedIn">[LinkedIn]</a>
-    <a href="https://x.com/rohitium" aria-label="X">[X]</a>
-    <a href="https://scholar.google.com/citations?user=yjeD2nkAAAAJ&hl=en&oi=ao" aria-label="Google Scholar">[Google Scholar]</a>
-    <a href="https://www.chess.com/member/kingofspades92" aria-label="Chess.com">[Chess.com]</a>
-    <a href="mailto:rohitsatija0092@gmail.com" aria-label="Gmail">[Gmail]</a>
-  </section>
+<section class="social-links">
+  <a href="https://www.linkedin.com/in/rohit-satija/" aria-label="LinkedIn">[LinkedIn]</a>
+  <a href="https://x.com/rohitium" aria-label="X">[X]</a>
+  <a href="https://scholar.google.com/citations?user=yjeD2nkAAAAJ&hl=en&oi=ao" aria-label="Google Scholar">[Google Scholar]</a>
+  <a href="https://www.chess.com/member/kingofspades92" aria-label="Chess.com">[Chess.com]</a>
+  <a href="mailto:rohitsatija0092@gmail.com" aria-label="Gmail">[Gmail]</a>
+</section>
 
-  <section class="intro">
-    <p>
-      Hello! I’m a computational biologist and AI enthusiast. I enjoy 
-      working on projects that intersect biology, physics, and machine 
-      learning. Feel free to explore my portfolio, and don’t hesitate 
-      to reach out if you’d like to collaborate.
-    </p>
-  </section>
+<section class="intro">
+  <p>
+    Hello! I’m a computational biologist and AI enthusiast. I enjoy 
+    working on projects that intersect biology, physics, and machine 
+    learning. Feel free to explore my portfolio, and don’t hesitate 
+    to reach out if you’d like to collaborate.
+  </p>
+</section>
 
-  <section class="blog">
-    <h2>Recent Blog Posts</h2>
-    <ul>
-      {% for post in site.posts %}
-        <li>
-          <a href="{{ post.url }}">{{ post.title }}</a> - <em>{{ post.date | date: "%B %d, %Y" }}</em>
-        </li>
-      {% endfor %}
-    </ul>
-  </section>
+<section class="blog">
+  <h2>Recent Blog Posts</h2>
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a> - <em>{{ post.date | date: "%B %d, %Y" }}</em>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
 
-  <footer>
+  <!-- <footer>
     <p>Copyright © 2025 Rohit Satija. All rights reserved.</p>
   </footer>
 </body>
-</html>
+</html> -->
