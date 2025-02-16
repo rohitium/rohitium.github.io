@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Rohit Satija"
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +19,6 @@
       color: #333;
     }
 
-    /* Header Section */
     header {
       display: flex;
       align-items: center;
@@ -25,7 +29,7 @@
       height: 120px;
       border-radius: 50%;
       margin-right: 20px;
-      object-fit: cover; /* Adjust if necessary */
+      object-fit: cover;
     }
     .header-info h1 {
       font-size: 2.2em;
@@ -37,7 +41,6 @@
       font-weight: normal;
     }
 
-    /* Social Links Section */
     .social-links {
       margin: 0 20px;
       padding: 10px 0;
@@ -48,24 +51,49 @@
     .social-links a {
       text-decoration: none;
       color: #333;
-      margin-right: 15px; /* space between links */
+      margin-right: 15px;
     }
     .social-links a:hover {
       text-decoration: underline;
     }
 
-    /* Intro Section */
     .intro {
       margin: 20px;
       font-size: 1.1em;
+    }
+
+    .blog {
+      margin: 20px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .blog h2 {
+      font-size: 1.5em;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+    .blog ul {
+      list-style: none;
+      padding: 0;
+    }
+    .blog li {
+      margin: 10px 0;
+    }
+    .blog a {
+      text-decoration: none;
+      font-size: 1.2em;
+      color: #0073e6;
+    }
+    .blog a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
-  <!-- Header with Name, Picture, and Title/Affiliation -->
   <header>
-    <!-- Replace with your actual profile picture source -->
     <img class="profile-pic" src="assets/linkedIn-picFull.jpeg" alt="LinkedIn pic" />
     <div class="header-info">
       <h1>Rohit Satija, PhD</h1>
@@ -75,7 +103,6 @@
     </div>
   </header>
 
-  <!-- Word-Based Links in Square Brackets -->
   <section class="social-links">
     <a href="https://www.linkedin.com/in/rohit-satija/" aria-label="LinkedIn">[LinkedIn]</a>
     <a href="https://x.com/rohitium" aria-label="X">[X]</a>
@@ -84,7 +111,6 @@
     <a href="mailto:rohitsatija0092@gmail.com" aria-label="Gmail">[Gmail]</a>
   </section>
 
-  <!-- Intro Section -->
   <section class="intro">
     <p>
       Hello! I’m a computational biologist and AI enthusiast. I enjoy 
@@ -93,5 +119,17 @@
       to reach out if you’d like to collaborate.
     </p>
   </section>
+
+  <section class="blog">
+    <h2>Recent Blog Posts</h2>
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a> - <em>{{ post.date | date: "%B %d, %Y" }}</em>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
 </body>
 </html>
