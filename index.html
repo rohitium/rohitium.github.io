@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Rohit Satija"
+title: "Home"
 ---
 
 <!DOCTYPE html>
@@ -22,8 +22,27 @@ title: "Rohit Satija"
     header {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       padding: 20px;
+      background-color: #fff;
+      border-bottom: 1px solid #ccc;
     }
+
+    .site-title {
+      font-size: 1.5em;
+      margin: 0;
+    }
+
+    .site-title a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .profile-section {
+      display: flex;
+      align-items: center;
+    }
+
     .profile-pic {
       width: 120px;
       height: 120px;
@@ -31,10 +50,12 @@ title: "Rohit Satija"
       margin-right: 20px;
       object-fit: cover;
     }
+
     .header-info h1 {
       font-size: 2.2em;
       margin: 0;
     }
+
     .header-info h2 {
       font-size: 1.2em;
       margin: 5px 0 0 0;
@@ -47,12 +68,15 @@ title: "Rohit Satija"
       font-size: 1.1em;
       border-top: 1px solid #ccc;
       border-bottom: 1px solid #ccc;
+      text-align: center;
     }
+
     .social-links a {
       text-decoration: none;
       color: #333;
       margin-right: 15px;
     }
+
     .social-links a:hover {
       text-decoration: underline;
     }
@@ -69,31 +93,49 @@ title: "Rohit Satija"
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+
     .blog h2 {
       font-size: 1.5em;
       border-bottom: 2px solid #ccc;
       padding-bottom: 5px;
     }
+
     .blog ul {
       list-style: none;
       padding: 0;
     }
+
     .blog li {
       margin: 10px 0;
     }
+
     .blog a {
       text-decoration: none;
       font-size: 1.2em;
       color: #0073e6;
     }
+
     .blog a:hover {
       text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #666;
+      border-top: 1px solid #ccc;
+      margin-top: 20px;
     }
   </style>
 </head>
 
 <body>
   <header>
+    <h1 class="site-title"><a href="/">Home</a></h1>
+  </header>
+
+  <div class="profile-section">
     <img class="profile-pic" src="assets/linkedIn-picFull.jpeg" alt="LinkedIn pic" />
     <div class="header-info">
       <h1>Rohit Satija, PhD</h1>
@@ -101,7 +143,7 @@ title: "Rohit Satija"
       <h2>AI and Data Intelligence Team</h2>
       <h2>Pivotal Life Sciences</h2>
     </div>
-  </header>
+  </div>
 
   <section class="social-links">
     <a href="https://www.linkedin.com/in/rohit-satija/" aria-label="LinkedIn">[LinkedIn]</a>
@@ -131,5 +173,8 @@ title: "Rohit Satija"
     </ul>
   </section>
 
+  <footer>
+    <p>Copyright © 2025 Rohit Satija. All rights reserved.</p>
+  </footer>
 </body>
 </html>
