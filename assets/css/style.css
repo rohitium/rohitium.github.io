@@ -1,0 +1,29 @@
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+
+  .profile-section {
+    display: flex;
+    align-items: center;
+  }
+  .header-info h1 {
+    font-size: 2.2em;
+    margin: 0;
+  }
+  .header-info h2 {
+    font-size: 1.2em;
+    margin: 5px 0 0 0;
+    font-weight: normal;
+  }
+  .social-links a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #007bff;
+  }
+    .social-links a:hover {
+        text-decoration: underline;
+    }  
