@@ -39,6 +39,8 @@ where $$D = D_A + D_B$$ is the sum of diffusion coefficients of the two molecule
 2. It provides the speed limit - a soft upper bound - of the bimolecular reaction rate for any two molecules. The actual association rate is likely to be less than this quantity.
 3. From a profound theoretical viewpoint, this rate equation establishes a direct connection between _physical dynamics_ and _chemical kinetics_ of biomolecules.
 
+### Derivation of Smoluchowski Rate
+
 This last point can be exemplified by deriving **Eq. (1)** from first-principles. Let us start with the usual derivation of the Smoluchowski rate equation from bulk diffusion.[^16] 
 
 We envision the dynamics of the two molecules as isotropic translational diffusion between molecules of $$A$$ and $$B$$. Without losing any generality, we put ourselves in the reference frame of molecule $$A$$, such that $$A$$ is held stationary, while $$B$$ diffuses until molecules of $$B$$ encounter molecules of $$A$$. This model suggests that the concentration of (unbound) $$B$$ molecules can be described by Fick’s second law:
@@ -52,6 +54,72 @@ Where $$D = D_A + D_B$$ is again the sum of diffusion coefficients of A and B, w
 When $$A$$ and $$B$$ are far apart, the concentration of $$B$$ is just a constant – the bulk concentration of $$B$$ in solution, say $$ C(r → ∞, t) = C_0$$. As soon as $$A$$ and $$B$$ encounter each other, we assume that they have reached the EC. Thus, we install an absorbing boundary condition at the encounter cross-section, e.g. $$r = R = R_A + R_B$$ or the sum of the radii of $$A$$ and $$B$$, such that $$C(r = R, t) = 0$$. 
 
 At steady state, the rate of change of $$C(r, t)$$ or the left hand side of **Eq. (2)** goes to zero. In other words, the concentration distribution of $$B$$ becomes constant with respect to time, i.e. $$C(r, t → ∞) → C(r)$$. Thus, **Eq. (2)** reduces to:
+
+$$
+∇^2C(\mathbf{r}) = 0 \tag{3}
+$$
+
+In order to solve this equation analytically, we exploit the spherical symmetry of the problem – collision of $$A$$ and $$B$$ in any orientation with respect to each other leads to the formation of the encounter complex and, thus, the Laplacian in **Eq. (3)** consists of only the radial direction in spherical coordinates:
+
+$$
+∂/∂r(r^2 ∂C(r)/∂r) = 0 \tag{4}
+$$
+
+It is easy to verify that the solution to **Eq. (4)** that satisfies the necessary boundary conditions can be written as:
+
+$$
+C(r) = C_0 (1-R/r) \tag{5}
+$$
+
+Now that we have solved for the concentration distribution profile of $$B$$, we can use this solution to extract the rate of encounter with $$A$$. 
+
+The flux of $$B$$ encountering $$A$$, or the number of collisions between $$A$$ and $$B$$ per unit time per unit area, is given by Fick’s first law:
+
+$$
+\mathbf{J}(\mathbf{r}, t) = − D\mathbf{∇}C(\mathbf{r}, t) \tag{6}
+$$
+
+Plugging **Eq. (5)** into **Eq. (6)**, we get the steady state flux of $$B$$ encountering $$A$$:
+
+$$
+\begin{aligned}
+\mathbf{J}(r = R) 
+&= \left[ -D \nabla C(r) \right]_{r=R} \,\hat{\mathbf{r}} \\
+&= \left[ -D C_0 \,\frac{R}{r^2} \right]_{r=R} \,\hat{\mathbf{r}} \\
+&= -\left(\frac{D C_0}{R}\right)\,\hat{\mathbf{r}}
+\end{aligned}
+\tag{7}
+$$
+
+The negative sign here simply denotes the direction of the flux in the radial coordinate $$ȓ$$, i.e. towards the molecules of $$A$$ or, equivalently, towards the origin. The total flux over the entire cross-section of the encounter, i.e. the total number of collisions between $$A$$ and $$B$$ per unit time, can be obtained by computing the surface integral:
+
+$$
+j = −∮\mathbf{J}(\mathbf{r}, t)⋅d\mathbf{S} \tag{8}
+$$
+
+For the simplest scenario of a spherical encounter cross-section with radius $$r = R$$, $$∮d\mathbf{S} = 4πR^2 ȓ$$ and the total flux turns out to be:
+
+$$
+\begin{aligned}
+j 
+&= -\,\mathbf{J}(r = R)\,\cdot \bigl(4\pi R^2 \,\hat{\mathbf{r}}\bigr) \\
+&= \left(\frac{D\,C_0}{R}\right)\,\hat{\mathbf{r}} \,\cdot \bigl(4\pi R^2 \,\hat{\mathbf{r}}\bigr) \\
+&= 4\pi\,D\,R\,C_0
+\end{aligned}
+\tag{9}
+$$
+
+Finally, the rate of this encounter is simply the flux per unit bulk concentration of $$B$$, i.e.
+
+$$
+\begin{aligned}
+k_{\text{on}} 
+&= \frac{j}{C_0} \\
+&= 4\pi\,D\,R
+\end{aligned}
+\tag{10}
+$$
+
 
 
 [^1]: Vauquelin, G. (2016). *Effects of target binding kinetics on in vivo drug efficacy: $$k_{\text{off}}, k_{\text{on}}$$, and rebinding*. British Journal of Pharmacology, 173(15), 2319-2334.
