@@ -1,1 +1,7 @@
 theme: minima
+
+author:
+  name: "Rohit Satija, PhD"
+  email: "rohitsatija0092@gmail.com"
+  position: "Computational Biologist"
+  affiliation: "AI and Data Intelligence Team, Pivotal Life Sciences"
