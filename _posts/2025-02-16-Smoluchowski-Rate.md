@@ -142,19 +142,19 @@ $$
 
 ### References
 
-[^1]: Vauquelin, G. (2016). *Effects of target binding kinetics on in vivo drug efficacy: $$k_{\text{off}}, k_{\text{on}}$$, and rebinding*. British Journal of Pharmacology, 173(15), 2319-2334.
-[^2]: Klipp, E., & Liebermeister, W. (2006). *Mathematical modeling of intracellular signaling pathways*. BMC Neuroscience, 7, 1-16.
-[^3]: Bansal, L., Nichols, E. M., et al. (2022). *Mathematical modeling of complement pathway dynamics for target validation and selection of drug modalities for complement therapies*. Frontiers in Pharmacology, 13, 855743.
-[^4]: Eigen, M. (1974). *Diffusion control in biochemical reactions*. Quantum Statistical Mechanics in the Natural Sciences.
-[^5]: Bell, G. I. (1978). *Models for the specific adhesion of cells to cells*. Science, 200(4342), 618-627.
-[^6]: Gabdoulline, R. R., & Wade, R. C. (1999). *On the protein-protein diffusional encounter complex*. Journal of Molecular Recognition, 12(4), 226-234.
-[^7]: Tang, C., Iwahara, J., & Clore, G. M. (2006). *Visualization of transient encounter complexes in protein-protein association*. Nature, 444(7117), 383-386.
-[^8]: Tiwary, P., et al. (2015). *Kinetics of protein-ligand unbinding: Predicting pathways, rates, and rate-limiting steps*. Proceedings of the National Academy of Sciences, 112(5), E386-E391.
-[^9]: Plattner, N., et al. (2017). *Complete protein-protein association kinetics in atomic detail revealed by molecular dynamics simulations and Markov modeling*. Nature Chemistry, 9(10), 1005-1011.
-[^10]: Tang, Z., et al. (2020). *Transient states and barriers from molecular simulations and the milestoning theory*. Journal of Chemical Theory and Computation, 16(3), 1882-1895.
-[^11]: Smoluchowski, M. V. (1917). *Mathematical theory of the kinetics of the coagulation of colloidal solutions*. Z. Phys. Chem., 92, 129-168.
-[^12]: Sveshnikoff, B. (1935). *On the theory of photochemical reactions and chemiluminescence in solutions*. Acta Physicochim. URSS, 3, 257-268.
-[^13]: Debye, P. (1942). *Reaction rates in ionic solutions*. Transactions of the Electrochemical Society, 82(1), 265.
-[^14]: Shoup, D., Lipari, G., & Szabo, A. (1981). *Diffusion-controlled bimolecular reaction rates. The effect of rotational diffusion and orientation constraints*. Biophysical Journal, 36(3), 697-714.
-[^15]: Schlosshauer, M., & Baker, D. (2002). *A general expression for bimolecular association rates with orientational constraints*. The Journal of Physical Chemistry B, 106(46), 12079-12083.
-[^16]: Altan-Bonnet, G., Mora, T., & Walczak, A. M. (2020). *Quantitative immunology for physicists*. Physics Reports, 849, 1-83.
+[^1]: Vauquelin, G. (2016). Effects of target binding kinetics on in vivo drug efficacy: $$k_{\text{off}}, k_{\text{on}}$$, and rebinding. *British Journal of Pharmacology*, 173(15), 2319-2334.
+[^2]: Klipp, E., & Liebermeister, W. (2006). Mathematical modeling of intracellular signaling pathways. *BMC Neuroscience*, 7, 1-16.
+[^3]: Bansal, L., Nichols, E. M., et al. (2022). Mathematical modeling of complement pathway dynamics for target validation and selection of drug modalities for complement therapies. *Frontiers in Pharmacology*, 13, 855743.
+[^4]: Eigen, M. (1974). Diffusion control in biochemical reactions. *Quantum Statistical Mechanics in the Natural Sciences*.
+[^5]: Bell, G. I. (1978). Models for the specific adhesion of cells to cells. *Science*, 200(4342), 618-627.
+[^6]: Gabdoulline, R. R., & Wade, R. C. (1999). On the protein-protein diffusional encounter complex. *Journal of Molecular Recognition*, 12(4), 226-234.
+[^7]: Tang, C., Iwahara, J., & Clore, G. M. (2006). Visualization of transient encounter complexes in protein-protein association. *Nature*, 444(7117), 383-386.
+[^8]: Tiwary, P., et al. (2015). Kinetics of protein-ligand unbinding: Predicting pathways, rates, and rate-limiting steps. *Proceedings of the National Academy of Sciences*, 112(5), E386-E391.
+[^9]: Plattner, N., et al. (2017). Complete protein-protein association kinetics in atomic detail revealed by molecular dynamics simulations and Markov modeling. *Nature Chemistry*, 9(10), 1005-1011.
+[^10]: Tang, Z., et al. (2020). Transient states and barriers from molecular simulations and the milestoning theory. *Journal of Chemical Theory and Computation*, 16(3), 1882-1895.
+[^11]: Smoluchowski, M. V. (1917). Mathematical theory of the kinetics of the coagulation of colloidal solutions. *Z. Phys. Chem.*, 92, 129-168.
+[^12]: Sveshnikoff, B. (1935). On the theory of photochemical reactions and chemiluminescence in solutions. *Acta Physicochim. USSR*, 3, 257-268.
+[^13]: Debye, P. (1942). Reaction rates in ionic solutions. *Transactions of the Electrochemical Society*, 82(1), 265.
+[^14]: Shoup, D., Lipari, G., & Szabo, A. (1981). Diffusion-controlled bimolecular reaction rates. The effect of rotational diffusion and orientation constraints. *Biophysical Journal*, 36(3), 697-714.
+[^15]: Schlosshauer, M., & Baker, D. (2002). A general expression for bimolecular association rates with orientational constraints. *Journal of Physical Chemistry B*, 106(46), 12079-12083.
+[^16]: Altan-Bonnet, G., Mora, T., & Walczak, A. M. (2020). Quantitative immunology for physicists. *Physics Reports*, 849, 1-83.
