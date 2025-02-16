@@ -3,3 +3,8 @@ theme: minima
 author:
   name: "Rohit Satija"
   email: "rohitsatija0092@gmail.com"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
