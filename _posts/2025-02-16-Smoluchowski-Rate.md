@@ -12,7 +12,7 @@ The first step of biomolecular communication is the binding of two molecules, e.
 
 ### The Encounter Complex (EC)
 
-A key concept within the theory of bimolecular association is the notion of the Encounter Complex (EC),[^4,^5] or the set of structural configurations observed when the molecules first "encounter" one another, that may be characterized by non-specific interactions between the two molecules.[^6,^7] Depending on the precise structure, orientation, and conditions of this encounter, the molecules may dissociate again or continue to form stable interactions, e.g., van der Waals, hydrophobic, or electrostatic interactions, with possible conformational rearrangements, and settle into a bound complex (BC).
+A key concept within the theory of bimolecular association is the notion of the Encounter Complex (EC),[^4] [^5] or the set of structural configurations observed when the molecules first "encounter" one another, that may be characterized by non-specific interactions between the two molecules.[^6] [^7] Depending on the precise structure, orientation, and conditions of this encounter, the molecules may dissociate again or continue to form stable interactions, e.g., van der Waals, hydrophobic, or electrostatic interactions, with possible conformational rearrangements, and settle into a bound complex (BC).
 
 ![EC-scheme](/assets/EC_scheme.png)
 
@@ -21,7 +21,7 @@ Given an excess of computational resources, the exact on-rate \($$k_{\text{on}}$
 1. The process that leads to the formation of encounter complex (EC).
 2. Molecule-specific interaction dynamics, including conformational changes, that lead to formation of the bound complex (BC) from the encounter complex (EC).
 
-Step 2 must still, in general, be treated using numerical sampling, e.g. all-atom molecular dynamics simulationsm,[^8,^9,^10] while step 1 often relies on analytical kinetic rate theories.
+Step 2 must still, in general, be treated using numerical sampling, e.g. all-atom molecular dynamics simulationsm,[^8] [^9] [^10] while step 1 often relies on analytical kinetic rate theories.
 
 ### The Smoluchowski Diffusion Rate Equation
 
@@ -40,7 +40,7 @@ where $$D = D_A + D_B$$ is the sum of diffusion coefficients of the two molecule
 2. It provides the speed limit - a soft upper bound - of the bimolecular reaction rate for any two molecules. The actual association rate is likely to be less than this quantity.
 3. From a profound theoretical viewpoint, this rate equation establishes a direct connection between _physical dynamics_ and _chemical kinetics_ of biomolecules.
 
-This last point can be exemplified by deriving Eq. $$\ref{eq1}$$ from first-principles. Let us start with the usual derivation of the Smoluchowski rate equation from bulk diffusion.[^16] 
+This last point can be exemplified by deriving Eq. \ref{eq1} from first-principles. Let us start with the usual derivation of the Smoluchowski rate equation from bulk diffusion.[^16] 
 
 We envision the dynamics of the two molecules as isotropic translational diffusion between molecules of $$A$$ and $$B$$. Without losing any generality, we put ourselves in the reference frame of molecule $$A$$, such that $$A$$ is held stationary, while $$B$$ diffuses until molecules of $$B$$ encounter molecules of $$A$$. This model suggests that the concentration of (unbound) $$B$$ molecules can be described by Fick’s second law:
 
@@ -53,7 +53,7 @@ Where $$D = D_A + D_B$$ is again the sum of diffusion coefficients of A and B, w
 
 When $$A$$ and $$B$$ are far apart, the concentration of $$B$$ is just a constant – the bulk concentration of $$B$$ in solution, say $$ C(r → ∞, t) = C_0$$. As soon as $$A$$ and $$B$$ encounter each other, we assume that they have reached the EC. Thus, we install an absorbing boundary condition at the encounter cross-section, e.g. $$r = R = R_A + R_B$$ or the sum of the radii of $$A$$ and $$B$$, such that $$C(r = R, t) = 0$$. 
 
-At steady state, the rate of change of $$C(r, t)$$ or the left hand side of Eq. $$\ref{eq2}$$ goes to zero. In other words, the concentration distribution of $$B$$ becomes constant with respect to time, i.e. $$C(r, t → ∞) → C(r)$$. Thus, Eq. $$\ref{eq2}$$ reduces to:
+At steady state, the rate of change of $$C(r, t)$$ or the left hand side of Eq. \ref{eq2} goes to zero. In other words, the concentration distribution of $$B$$ becomes constant with respect to time, i.e. $$C(r, t → ∞) → C(r)$$. Thus, Eq. \ref{eq2} reduces to:
 
 
 [^1]: Vauquelin, G. (2016). *Effects of target binding kinetics on in vivo drug efficacy: $$k_{\text{off}}, k_{\text{on}}$$, and rebinding*. British Journal of Pharmacology, 173(15), 2319-2334.
