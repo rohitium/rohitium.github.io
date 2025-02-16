@@ -30,8 +30,7 @@ More than a century ago, Smoluchowski proposed a theory for the kinetics of coll
 According to Smoluchowski theory, the rate at which any two biomolecules encounter each other can be written as:
 
 $$
-k_{\text{on}} = 4 \pi D R
-\label{eq1}
+k_{\text{on}} = 4 \pi D R \tag{1}
 $$
 
 where $$D = D_A + D_B$$ is the sum of diffusion coefficients of the two molecules and $$R = R_A + R_B$$ is the sum of their radii. This result is remarkable for several reasons:
@@ -40,20 +39,19 @@ where $$D = D_A + D_B$$ is the sum of diffusion coefficients of the two molecule
 2. It provides the speed limit - a soft upper bound - of the bimolecular reaction rate for any two molecules. The actual association rate is likely to be less than this quantity.
 3. From a profound theoretical viewpoint, this rate equation establishes a direct connection between _physical dynamics_ and _chemical kinetics_ of biomolecules.
 
-This last point can be exemplified by deriving Eq. \ref{eq1} from first-principles. Let us start with the usual derivation of the Smoluchowski rate equation from bulk diffusion.[^16] 
+This last point can be exemplified by deriving **Eq. (1)** from first-principles. Let us start with the usual derivation of the Smoluchowski rate equation from bulk diffusion.[^16] 
 
 We envision the dynamics of the two molecules as isotropic translational diffusion between molecules of $$A$$ and $$B$$. Without losing any generality, we put ourselves in the reference frame of molecule $$A$$, such that $$A$$ is held stationary, while $$B$$ diffuses until molecules of $$B$$ encounter molecules of $$A$$. This model suggests that the concentration of (unbound) $$B$$ molecules can be described by Fick’s second law:
 
 $$
-∂C(\mathbf{r}, t)/∂t = D∇^2C(\mathbf{r}, t)  
-\label{eq2} 
+∂C(\mathbf{r}, t)/∂t = D∇^2C(\mathbf{r}, t) \tag{2} 
 $$
 
 Where $$D = D_A + D_B$$ is again the sum of diffusion coefficients of A and B, while $$C(\mathbf{r}, t)$$ represents the concentration of $$B$$ at any spatial location $$ \mathbf{r}  = (r, 𝜃, ø) $$ and at any time $$t$$. Note that, for the purpose of this problem, we are not interested in the dynamics of the association of $$A$$ and $$B$$ beyond the encounter complex, or the dynamics of dissociation of $$A$$ and $$B$$. 
 
 When $$A$$ and $$B$$ are far apart, the concentration of $$B$$ is just a constant – the bulk concentration of $$B$$ in solution, say $$ C(r → ∞, t) = C_0$$. As soon as $$A$$ and $$B$$ encounter each other, we assume that they have reached the EC. Thus, we install an absorbing boundary condition at the encounter cross-section, e.g. $$r = R = R_A + R_B$$ or the sum of the radii of $$A$$ and $$B$$, such that $$C(r = R, t) = 0$$. 
 
-At steady state, the rate of change of $$C(r, t)$$ or the left hand side of Eq. \ref{eq2} goes to zero. In other words, the concentration distribution of $$B$$ becomes constant with respect to time, i.e. $$C(r, t → ∞) → C(r)$$. Thus, Eq. \ref{eq2} reduces to:
+At steady state, the rate of change of $$C(r, t)$$ or the left hand side of **Eq. (2)** goes to zero. In other words, the concentration distribution of $$B$$ becomes constant with respect to time, i.e. $$C(r, t → ∞) → C(r)$$. Thus, **Eq. (2)** reduces to:
 
 
 [^1]: Vauquelin, G. (2016). *Effects of target binding kinetics on in vivo drug efficacy: $$k_{\text{off}}, k_{\text{on}}$$, and rebinding*. British Journal of Pharmacology, 173(15), 2319-2334.
