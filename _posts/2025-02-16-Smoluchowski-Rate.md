@@ -10,19 +10,20 @@ layout: post
 
 # A Single Molecule View of Diffusion-Limited Bimolecular Association
 
-The first step of biomolecular communication is the binding of two molecules, e.g., a transcription factor binding to the promoter sequence of the target gene or a drug binding to its target protein. Especially from the drug design point of view, it is useful to optimize the structure of the drug molecule such that this binding process is fast, specific, and robust [^1]. Moreover, the rate of such a binding process, also called the "on"-rate and denoted as \(k_{\text{on}}\), is commonly used to parameterize pathway models for cell signaling cascades [^2]. Such pathway models, in turn, act as cost-effective tools for _in silico_ drug screening and target identification and prioritization [^3].
+The first step of biomolecular communication is the binding of two molecules, e.g., a transcription factor binding to the promoter sequence of the target gene or a drug binding to its target protein. Especially from the drug design point of view, it is useful to optimize the structure of the drug molecule such that this binding process is fast, specific, and robust.[^1] Moreover, the rate of such a binding process, also called the "on"-rate and denoted as \($$k_{\text{on}}$$\), is commonly used to parameterize pathway models for cell signaling cascades.[^2] Such pathway models, in turn, act as cost-effective tools for _in silico_ drug screening and target identification and prioritization.[^3]
 
 ## The Encounter Complex (EC)
 
-A key concept within the theory of bimolecular association is the notion of the **encounter complex (EC)** [^4][^5], or the set of structural configurations observed when the molecules first "encounter" one another, that may be characterized by non-specific interactions between the two molecules [^6][^7]. Depending on the precise structure, orientation, and conditions of this encounter, the molecules may dissociate again or continue to form stable interactions, e.g., van der Waals, hydrophobic, or electrostatic interactions, with possible conformational rearrangements, and settle into a bound complex (BC).
+A key concept within the theory of bimolecular association is the notion of the _Encounter Complex (EC)_[^4], [^5], or the set of structural configurations observed when the molecules first "encounter" one another, that may be characterized by non-specific interactions between the two molecules [^6], [^7]. Depending on the precise structure, orientation, and conditions of this encounter, the molecules may dissociate again or continue to form stable interactions, e.g., van der Waals, hydrophobic, or electrostatic interactions, with possible conformational rearrangements, and settle into a bound complex (BC).
 
-![EC-scheme](assets/EC_scheme.png)
+![EC-scheme](/assets/EC_scheme.png)
 
-Given an excess of computational resources, the exact on-rate \(k_{\text{on}}\) can, in principle, be calculated from physics-based numerical sampling methods for any two molecules under any arbitrary reaction conditions. However, in practice, the problem is often broken down into two steps:
-1. **Diffusion**: The process that leads to the formation of EC.
-2. **Interaction dynamics**: Molecule-specific dynamics that lead to BC from EC.
+Given an excess of computational resources, the exact on-rate \($$k_{\text{on}}$$\) can, in principle, be calculated from physics-based numerical sampling methods for any two molecules under any arbitrary reaction conditions. However, in practice, the problem is often broken down into two steps:
 
-Step 2 must still, in general, be treated using numerical sampling, such as molecular dynamics (MD) simulations [^8][^9][^10], while step 1 often relies on analytical kinetic rate theories.
+1. **Diffusion**: The process that leads to the formation of encounter complex (EC).
+2. **Interaction dynamics**: Molecule-specific dynamics that lead to bound complex (BC) from encounter complex (EC).
+
+Step 2 must still, in general, be treated using numerical sampling, such as molecular dynamics (MD) simulations,[^8], [^9], [^10] while step 1 often relies on analytical kinetic rate theories.
 
 ## The Smoluchowski Diffusion Rate Equation
 
@@ -56,10 +57,6 @@ When A and B are far apart, the concentration of B is just a constant – the bu
 
 At steady state, the rate of change of C(r, t) or the left hand side of Eq. 2 goes to zero. In other words, the concentration distribution of B becomes constant with respect to time, i.e. C(r, t→∞) → C(r). Thus, Eq. 2 reduces to:
 
-
----
-
-## References
 
 [^1]: Vauquelin, G. (2016). *Effects of target binding kinetics on in vivo drug efficacy: \(k_{\text{off}}, k_{\text{on}}\), and rebinding*. British Journal of Pharmacology, 173(15), 2319-2334.
 [^2]: Klipp, E., & Liebermeister, W. (2006). *Mathematical modeling of intracellular signaling pathways*. BMC Neuroscience, 7, 1-16.
