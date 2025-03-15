@@ -82,8 +82,6 @@ From a developmental perspective, metamorphic memory retention illuminates the r
 
 ### Implications for AI and Computing
 
-The natural examples of memory persistence through structural transformation offer inspiration for developing more resilient artificial neural networks and computing systems. Current AI systems typically struggle with "catastrophic forgetting" when learning new tasks, while biological systems demonstrate remarkable adaptability.[^14]
-
 Silicon-based memory systems might benefit from architectural principles observed in metamorphosing insects, particularly regarding information redundancy and distributed storage.[^12] [^13] These biological systems demonstrate how information can persist despite radical reconfiguration of the underlying hardware.
 
 ## Conclusion
@@ -109,4 +107,3 @@ As we continue to explore this fascinating phenomenon, we may uncover principles
 [^11]: Kirihata, T., Golz, J., Wordeman, M., Batra, P., Maier, G. W., Robson, N., ... & Iyer, S. S. (2016). Three-dimensional dynamic random access memories using through-silicon-vias. *IEEE Journal on Emerging and Selected Topics in Circuits and Systems*, 6(3), 373-384.
 [^12]: Yuan, Y., Peng, Y., Cheung, S., Sorin, W. V., Huang, Z., Liang, D., ... & Beausoleil, R. G. (2024). Silicon Optical Memory: Non-Volatile Optoelectronic Devices via Si-SiO $ _2 $ Hysteresis Effect. *arXiv*:2401.03414.
 [^13]: Sontakke, V., & Atchina, D. (2024). Memory built-in self-repair and correction for improving yield: a review. *International Journal of Electrical and Computer Engineering*, 14(140), 10-11591.
-[^14]: French, R. M. (1999). Catastrophic forgetting in connectionist networks. *Trends in cognitive sciences*, 3(4), 128-135.
