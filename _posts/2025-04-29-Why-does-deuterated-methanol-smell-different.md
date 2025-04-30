@@ -27,7 +27,7 @@ Nevertheless, apart from academic interest, this question has practical value fr
 [^1]: Born, M., & Oppenheimer, R. (1927). Zur quantentheorie der molekeln *Annalen der Physik*, v. 84.
 [^2]: Franco, M. I., Turin, L., Mershin, A., & Skoulakis, E. M. (2011). Molecular vibration-sensing component in Drosophila melanogaster olfaction. *Proceedings of the National Academy of Sciences*, 108(9), 3797-3802.
 [^3]: https://www.science.org/content/blog-post/vibrational-scent-wins-round.
-[^4]: https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Map%3A_Physical_Chemistry_for_the_Biosciences_(Chang)/09%3A_Chemical_Kinetics/9.08%3A_Isotope_Effects_in_Chemical_Reactions.
+[^4]: https://en.wikipedia.org/wiki/Kinetic_isotope_effect.
 [^5]: Turin, L. (1996). A spectroscopic mechanism for primary olfactory reception. *Chemical Senses*, 21(6), 773-791.
 [^6]: Brookes, J. C., Horsfield, A. P., & Stoneham, A. M. (2012). The swipe card model of odorant recognition. *Sensors*, 12(11), 15709-15749.
 [^7]: Keller, A., & Vosshall, L. B. (2004). A psychophysical test of the vibration theory of olfaction. *Nature Neuroscience*, 7(4), 337-338.
