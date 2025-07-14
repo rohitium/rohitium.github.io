@@ -18,21 +18,21 @@ The core insight of this approach is that DILI risk can be assessed through two 
 
 ### Direct Evidence Computation
 
-For each drug target, we compute direct DILI evidence based on the FDA's DILIrank dataset, which categorizes drugs according to their DILI concern level.[^3] The direct evidence score for a target $$\(T\)$$ is calculated as:
+For each drug target, we compute direct DILI evidence based on the FDA's DILIrank dataset, which categorizes drugs according to their DILI concern level.[^3] The direct evidence score for a target $$T$$ is calculated as:
 
 $$\text{Direct Evidence}(T) = \frac{\sum_{d \in D_T} w_d}{|D_T|}$$
 
-where $$\(D_T\)$$ is the set of drugs targeting $$\(T\)$$, $$\(w_d\)$$ is the DILI severity weight for drug $$\(d\)$$, and $$\(|D_T|\)$$ is the number of drugs targeting $$\(T\)$$.
+where $$D_T$$ is the set of drugs targeting $$T$$, $$w_d$$ is the DILI severity weight for drug $$d$$, and $$|D_T|$$ is the number of drugs targeting $$T$$.
 
 This approach captures the empirical observation that targets with more high-risk drugs are themselves more likely to be associated with DILI. For example, cytochrome P450 enzymes (CYP3A4, CYP2D6) show high direct evidence scores due to their involvement in the metabolism of numerous hepatotoxic compounds.[^4]
 
 ### Network Guilt-by-Association
 
-The network component leverages Pathway Commons data to identify targets that are functionally connected to known DILI-associated proteins.[^5] The network score for a target \(T\) is computed as:
+The network component leverages Pathway Commons data to identify targets that are functionally connected to known DILI-associated proteins.[^5] The network score for a target $$T$$ is computed as:
 
 $$\text{Network Score}(T) = \sum_{N \in \mathcal{N}(T)} \text{Direct Evidence}(N)$$
 
-where \(\mathcal{N}(T)\) represents the set of network neighbors of target \(T\).
+where $$\mathcal{N}(T)$$ represents the set of network neighbors of target $$T$$.
 
 This approach is based on the biological principle that proteins involved in related cellular processes often share similar drug sensitivity profiles. For instance, targets in the same metabolic pathway or protein complex may exhibit similar DILI risk profiles.
 
@@ -42,7 +42,7 @@ The final DILI risk score combines both components:
 
 $$\text{DILI Risk Score}(T) = \alpha \cdot \text{Direct Evidence}(T) + (1-\alpha) \cdot \text{Network Score}(T)$$
 
-where \(\alpha\) is a weighting parameter (typically set to 0.5) that balances the contribution of direct evidence versus network guilt-by-association.
+where $$\alpha$$ is a weighting parameter (typically set to 0.5) that balances the contribution of direct evidence versus network guilt-by-association.
 
 ## Data Integration and Validation
 
@@ -60,7 +60,7 @@ The validation strategy employs two complementary approaches:
 
 ### Calculation of Validation Metrics
 
-**Approval rates** are computed per target as the proportion of approved drugs among all drugs targeting that protein. For each target \(T\):
+**Approval rates** are computed per target as the proportion of approved drugs among all drugs targeting that protein. For each target $$T$$:
 
 $$\text{Approval Rate}(T) = \frac{\text{Number of approved drugs targeting } T}{\text{Total number of drugs targeting } T}$$
 
