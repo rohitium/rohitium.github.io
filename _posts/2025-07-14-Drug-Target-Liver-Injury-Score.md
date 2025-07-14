@@ -58,33 +58,31 @@ Both metrics are calculated using deduplicated drug-target pairs to ensure consi
 
 ## Results and Interpretation
 
-The analysis of 434 drug targets reveals several interesting patterns:
+We divided 518 drug targets into 3 buckets:
 
 ### Risk Distribution
-- **Low Risk**: 391 targets (90.1%)
-- **Medium Risk**: 31 targets (7.1%)
-- **High Risk**: 12 targets (2.8%)
-
-This distribution reflects the reality that most drug targets are not strongly associated with DILI, while a small subset shows elevated risk.
+- **Low Risk**: 173 targets (90.1%)
+- **Medium Risk**: 173 targets (7.1%)
+- **High Risk**: 172 targets (2.8%)
 
 ![DILI Risk Score vs Withdrawal Rate](/assets/risk_vs_withdrawal.png)
 
-*Figure 1: DILI risk score vs. drug withdrawal rate for 434 targets. Higher DILI risk targets show higher withdrawal rates (r = 0.212), indicating that targets associated with more hepatotoxic drugs are more likely to have drugs withdrawn from the market due to safety concerns.*
+*Figure 1: DILI risk score vs. drug withdrawal rate for 518 targets. Higher DILI risk targets correlate (weakly) with higher withdrawal rates (r = 0.025), indicating that targets associated with more hepatotoxic drugs are slightly more likely to have drugs withdrawn from the market due to safety concerns.*
 
 ![DILI Risk Score vs Approval Rate](/assets/risk_vs_approval.png)
 
-*Figure 2: DILI risk score vs. drug approval rate for 434 targets. Higher DILI risk targets show lower approval rates (r = -0.252), indicating that targets associated with more hepatotoxic drugs have fewer drugs successfully approved by regulatory agencies.*
+*Figure 2: DILI risk score vs. drug approval rate for 518 targets. Higher DILI risk targets correlate (weakly) with lower approval rates (r = -0.063), indicating that targets associated with more hepatotoxic drugs have slightly fewer drugs successfully approved by FDA.*
 
 ### Top High-Risk Targets
 
 The highest-risk targets identified using this approach are:
 
-1. **PTGS1** (COX-1): Risk score 1.000 (High)
-   - Associated with 37 unique drugs
-2. **PTGS2** (COX-2): Risk score 1.000 (High)
-   - Associated with 38 unique drugs
-3. **Sodium channels** (SCN10A, SCN11A, SCN1A, SCN2A, SCN3A, SCN4A, SCN5A, SCN7A): Risk score 0.793 (High)
-   - Each associated with 29 unique drugs
+1. **PTGS2** (COX-2): Risk score 1.0 (High)
+   - Associated with 32 drugs -- 10 approved/15 withdrawn
+2. **PTGS1** (COX-1): Risk score 0.7 (High)
+   - Associated with 26 drugs -- 8 approved/12 withdrawn
+3. **SCN5A** (Sodium channel): Risk score 0.5 (High)
+   - Associated with 28 drugs -- 10 approved/17 withdrawn
 
 Some of these results align with known DILI mechanisms. COX enzymes are well-established targets for NSAIDs, which are known to cause liver injury in susceptible individuals. Sodium channels are also implicated in drug-induced toxicity.[^8]
 
