@@ -8,9 +8,9 @@ layout: post
         id="MathJax-script"
         async></script>
 
-Drug-induced liver injury (DILI) remains one of the most significant challenges in drug development and clinical practice. Despite decades of research, DILI continues to be a leading cause of drug failure in clinical trials and post-marketing withdrawals.[^1] The liver's central role in drug metabolism, combined with its complex cellular architecture and diverse metabolic pathways, makes it particularly vulnerable to drug-induced damage. Traditional approaches to DILI prediction have relied heavily on animal models and in vitro assays, but these methods have limited predictive power for human outcomes.[^2]
+Drug-induced liver injury (DILI) continues to be a leading cause of drug failure in clinical trials and post-marketing withdrawals.[^1] The liver's central role in drug metabolism, combined with its complex cellular architecture and diverse metabolic pathways, makes it particularly vulnerable to drug-induced damage. Traditional approaches to DILI prediction have relied heavily on animal models and in vitro assays, but these methods have limited predictive power for human outcomes.[^2]
 
-The advent of large-scale genomic and proteomic datasets has opened new possibilities for computational approaches to DILI risk assessment. In particular, the integration of drug-target interaction data, pathway information, and clinical outcomes has enabled the development of more sophisticated risk prediction models. Here, I present a computational framework for assessing DILI risk at the drug target level, leveraging multiple data sources to create interpretable risk scores that can guide target prioritization in drug discovery.
+The advent of large-scale genomic and proteomic datasets has opened new possibilities for computational approaches to DILI risk assessment. In particular, integration of drug-target interaction data, pathway information, and clinical outcomes has enabled the development of more sophisticated risk prediction models. Here, I present a computational framework for assessing DILI risk at the drug target level, leveraging multiple data sources to create interpretable risk scores that can guide target prioritization in drug discovery.
 
 ## The Computational Framework
 
@@ -18,11 +18,11 @@ The core insight of this approach is that DILI risk can be assessed through two 
 
 ### Direct Evidence Computation
 
-For each drug target, we compute direct DILI evidence based on the FDA's DILIrank dataset, which categorizes drugs according to their DILI concern level.[^3] The direct evidence score for a target \(T\) is calculated as:
+For each drug target, we compute direct DILI evidence based on the FDA's DILIrank dataset, which categorizes drugs according to their DILI concern level.[^3] The direct evidence score for a target $$\(T\)$$ is calculated as:
 
 $$\text{Direct Evidence}(T) = \frac{\sum_{d \in D_T} w_d}{|D_T|}$$
 
-where \(D_T\) is the set of drugs targeting \(T\), \(w_d\) is the DILI severity weight for drug \(d\), and \(|D_T|\) is the number of drugs targeting \(T\).
+where $$\(D_T\)$$ is the set of drugs targeting $$\(T\)$$, $$\(w_d\)$$ is the DILI severity weight for drug $$\(d\)$$, and $$\(|D_T|\)$$ is the number of drugs targeting $$\(T\)$$.
 
 This approach captures the empirical observation that targets with more high-risk drugs are themselves more likely to be associated with DILI. For example, cytochrome P450 enzymes (CYP3A4, CYP2D6) show high direct evidence scores due to their involvement in the metabolism of numerous hepatotoxic compounds.[^4]
 
