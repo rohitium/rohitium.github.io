@@ -12,7 +12,7 @@ Drug-induced liver injury (DILI) continues to be a leading cause of drug failure
 
 The advent of large-scale genomic and proteomic datasets has opened new possibilities for computational approaches to DILI risk assessment. In particular, integration of drug-target interaction data, pathway information, and clinical outcomes has enabled the development of more sophisticated risk prediction models. Here, I present a computational framework for assessing DILI risk at the drug target level, leveraging multiple data sources to create interpretable risk scores that can guide target prioritization in drug discovery.
 
-## The Computational Framework
+## Definition
 
 The core insight of this approach is that DILI risk can be assessed through two complementary mechanisms: **direct evidence** and **network guilt-by-association**. Direct evidence captures the known DILI risk associated with drugs that target a specific protein, while network guilt-by-association leverages the biological principle that proteins connected in cellular networks often share functional properties, including susceptibility to drug-induced damage.
 
@@ -20,9 +20,9 @@ The core insight of this approach is that DILI risk can be assessed through two 
 
 For each drug target, we compute direct DILI evidence based on the FDA's DILIrank dataset, which categorizes drugs according to their DILI concern level.[^3] The direct evidence score for a target $$T$$ is calculated as:
 
-$$\text{Direct Evidence}(T) = \frac{\sum_{d \in D_T} w_d}{|D_T|}$$
+$$\text{Direct Evidence}(T) = \frac{\sum_{d \in D_T} w_d}{\sum_{d \in D_T}}$$
 
-where $$D_T$$ is the set of drugs targeting $$T$$, $$w_d$$ is the DILI severity weight for drug $$d$$, and $$|D_T|$$ is the number of drugs targeting $$T$$.
+where $$D_T$$ is the set of drugs targeting $$T$$, $$w_d$$ is the DILI severity weight for drug $$d$$, and $$\sum_{d \in D_T}$$ is the number of drugs targeting $$T$$.
 
 This approach captures the empirical observation that targets with more high-risk drugs are themselves more likely to be associated with DILI. For example, cytochrome P450 enzymes (CYP3A4, CYP2D6) show high direct evidence scores due to their involvement in the metabolism of numerous hepatotoxic compounds.[^4]
 
@@ -107,7 +107,7 @@ These results align with known DILI mechanisms. COX enzymes are well-established
 
 ## Limitations and Future Directions
 
-Several limitations should be acknowledged:
+The current approach has several limitations:
 
 1. **Data Quality**: The approach relies on the quality and completeness of the underlying datasets. Missing drug-target interactions or incomplete DILI classifications could affect results.
 2. **Mechanistic Complexity**: DILI involves complex interactions between drug properties, target characteristics, and patient factors. A target-level approach necessarily simplifies this complexity.
