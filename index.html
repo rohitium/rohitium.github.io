@@ -4,78 +4,100 @@ layout: default
 
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
-<div class="profile-section">
-  <img class="profile-pic" src="assets/linkedIn-picFull.jpeg" alt="LinkedIn pic" />
-  <div class="header-info">
-    <h1>Rohit Satija, PhD</h1>
-    <h2>Computational Biologist</h2>
-  </div>
+<div class="container">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="profile-section">
+      <img class="profile-pic" src="assets/linkedIn-picFull.jpeg" alt="Rohit Satija" />
+      <div class="header-info">
+        <h1>Rohit Satija, PhD</h1>
+        <h2>Computational Biologist</h2>
+      </div>
+    </div>
+
+    <section class="social-links">
+      <a href="https://www.linkedin.com/in/rohit-satija/" aria-label="LinkedIn">LinkedIn</a>
+      <a href="https://github.com/rohitium" aria-label="Github">Github</a>
+      <a href="https://bsky.app/profile/rohitium.bsky.social" aria-label="Bluesky">Bluesky</a>
+      <a href="https://x.com/rohitium" aria-label="X (Twitter)">X (Twitter)</a>
+      <a href="https://scholar.google.com/citations?user=yjeD2nkAAAAJ&hl=en&oi=ao" aria-label="Google Scholar">Google Scholar</a>
+      <a href="https://www.producthunt.com/@rohitium" aria-label="Product Hunt">Product Hunt</a>
+      <a href="https://www.chess.com/member/kingofspades92" aria-label="Chess.com">Chess.com</a>
+    </section>
+  </section>
+
+  <!-- About Section -->
+  <section class="content-section">
+    <h2 class="section-title">About Me</h2>
+    <div class="intro">
+      <p>
+        Hello! I'm a research scientist with a specialization in biophysics. I enjoy 
+        working on projects that intersect natural sciences, machine learning, and 
+        software development.
+      </p>
+      
+      <p>
+        I have more than 10 years of research experience across industry and academia.
+        Most recently, I was a Computational Biologist at <a href="https://pivotallifesciences.com/">Pivotal Life Sciences</a>, an 
+        early-stage therapeutics-focused biotech Venture Capital (VC) firm. There, I
+        was part of the AI and Data Intelligence team, building an internal AI platform
+        for due dilligence and NewCo creation.
+      </p>
+
+      <p>
+        Previously, I was a Multiscale Modeling Researcher at <a href="https://www.gene.com/">Genentech</a>, where I developed
+        a computational workflow for predicting protein-protein and protein-drug interaction
+        kinetics using <a href="https://www.nature.com/articles/s41586-021-03819-2">Alphafold</a>, 
+        <a href="https://github.com/openmm/openmm">Molecular Dynamics simulations</a>,
+        <a href="https://deeptime-ml.github.io/latest/index_msm.html">Markov State Models</a>, and
+        <a href="https://rohitium.github.io/2025/02/16/Smoluchowski-Rate.html">analytical rate theories from statistical mechanics</a>.
+        I also collaborated with Discovery Chemistry and PK/PD teams to generate molecular-level insights into portfolio drug candidates.
+      </p>
+
+      <p>
+        I did my postdoc at the <a href="https://www.berkeley.edu/">University of California, Berkeley</a>,
+        in the lab of <a href="https://scholar.google.com/citations?user=Lk38PP0AAAAJ&hl=en&oi=ao">Carlos J Bustamante</a>,
+        where I worked on interrogating dynamics of <a href="https://www.nature.com/articles/nature11600">artificially designed proteins</a>
+        using <a href="https://www.science.org/doi/10.1126/science.1116702">optical tweezers experiments</a>.
+        I also contributed to an explanation for <a href="https://www.biorxiv.org/content/10.1101/2021.11.15.468716v1">anomalous power spectra of DNA Origami tethers</a>
+        in these experiments.
+      </p>
+
+      <p>
+        I earned my PhD from the <a href="https://www.utexas.edu/">University of Texas at Austin</a>, in the group of 
+        <a href="https://scholar.google.com/citations?user=Q2aGki8AAAAJ&hl=en&oi=ao">Dmitrii E Makarov</a>,
+        where I contributed to the development of a theory for interpreting dynamics of low-dimensional
+        coordinates observed in single-molecule experiments and simulations. Briefly, we tested non-Markovian
+        models, such as the <a href="https://pubs.acs.org/doi/10.1021/acs.jpcb.8b11137">Generalized Langevin Equation</a>,
+        <a href="https://pubs.acs.org/doi/abs/10.1021/acs.jpcb.8b07361">Generalized Smolchowski Equation</a>, and
+        <a href="https://pubs.aip.org/aip/jcp/article/147/15/152707/196720/Transition-path-times-reveal-memory-effects-and">Fractional Brownian Motion</a>,
+        and found that these models where unable to explain the
+        <a href="https://www.pnas.org/doi/10.1073/pnas.1201811109">long tails observed in transition path time distributions</a>. 
+      </p>
+      
+      <p>
+        Serendipitously, we found that there is a <a href="https://www.pnas.org/doi/10.1073/pnas.2008307117">theoretical bound</a>
+        on the width of transition path time distributions for *Markovian* models, and this bound is violated by the observed long tails. 
+        This implied that the use of the <a href="https://www.science.org/doi/10.1126/science.aad0637">one-dimensional diffusion model</a>
+        to interpret dynamics of protein folding in single molecule experiments is unjustified.
+      </p>
+
+      <p>
+        I am originally from New Delhi, India, and I currently live in the SF Bay Area, CA. I like
+        playing tennis and chess, reading philosophy, and going on hikes with my wife and dog.
+      </p>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blog">
+    <h2>Recent Blog Posts</h2>
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a> - <em>{{ post.date | date: "%B %d, %Y" }}</em>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
 </div>
-
-<section class="social-links">
-  <a href="https://www.linkedin.com/in/rohit-satija/" aria-label="LinkedIn">[LinkedIn]</a>
-  <a href="https://github.com/rohitium" aria-label="Github">[Github]</a>
-  <a href="https://bsky.app/profile/rohitium.bsky.social" aria-label="Bluesky">[Bluesky]</a>
-  <a href="https://x.com/rohitium" aria-label="X (Twitter)">[X (Twitter)]</a>
-  <a href="https://scholar.google.com/citations?user=yjeD2nkAAAAJ&hl=en&oi=ao" aria-label="Google Scholar">[Google Scholar]</a>
-  <a href="https://www.producthunt.com/@rohitium" aria-label="Product Hunt">[Product Hunt]</a>
-  <a href="https://www.chess.com/member/kingofspades92" aria-label="Chess.com">[Chess.com]</a>
-</section>
-
-<section class="intro">
-  <p>
-    Hello! I’m a research scientist with a specialization in biophysics. I enjoy 
-    working on projects that intersect natural sciences, machine learning, and 
-    software development.
-
-    I have more than 10 years of research experience across industry and academia.
-    Most recently, I was a Computational Biologist at [Pivotal Life Sciences](https://pivotallifesciences.com/), an 
-    early-stage therapeutics-focused biotech Venture Capital (VC) firm. There, I
-    was part of the AI and Data Intelligence team, building an internal AI platform
-    for due dilligence and NewCo creation.
-
-    Previously, I was a Multiscale Modeling Researcher at [Genentech](https://www.gene.com/), where I developed
-    a computational workflow for predicting protein-protein and protein-drug interaction
-    kinetics using [Alphafold](https://www.nature.com/articles/s41586-021-03819-2), 
-    [Molecular Dynamics simulations](https://github.com/openmm/openmm),
-    [Markov State Models](https://deeptime-ml.github.io/latest/index_msm.html), and
-    [analytical rate theories from statistical mechanics](https://rohitium.github.io/2025/02/16/Smoluchowski-Rate.html).
-    I also collaborated with Discovery Chemistry and PK/PD teams to generate molecular-level insights into portfolio drug candidates.
-
-    I did my postdoc at the [University of California, Berkeley](https://www.berkeley.edu/),
-    in the lab of [Carlos J Bustamante](https://scholar.google.com/citations?user=Lk38PP0AAAAJ&hl=en&oi=ao),
-    where I worked on interrogating dynamics of [artificially designed proteins](https://www.nature.com/articles/nature11600)
-    using [optical tweezers experiments](https://www.science.org/doi/10.1126/science.1116702).
-    I also contributed to an explanation for [anomalous power spectra of DNA Origami tethers](https://www.biorxiv.org/content/10.1101/2021.11.15.468716v1)
-    in these experiments.
-
-    I earned my PhD from the [University of Texas at Austin](https://www.utexas.edu/), in the group of 
-    [Dmitrii E Makarov](https://scholar.google.com/citations?user=Q2aGki8AAAAJ&hl=en&oi=ao),
-    where I contributed to the development of a theory for interpreting dynamics of low-dimensional
-    coordinates observed in single-molecule experiments and simulations. Briefly, we tested non-Markovian
-    models, such as the [Generalized Langevin Equation](https://pubs.acs.org/doi/10.1021/acs.jpcb.8b11137),
-    [Generalized Smolchowski Equation](https://pubs.acs.org/doi/abs/10.1021/acs.jpcb.8b07361), and
-    [Fractional Brownian Motion](https://pubs.aip.org/aip/jcp/article/147/15/152707/196720/Transition-path-times-reveal-memory-effects-and),
-    and found that these models where unable to explain the
-    [long tails observed in transition path time distributions](https://www.pnas.org/doi/10.1073/pnas.1201811109). 
-    
-    Serendipitously, we found that there is a [theoretical bound](https://www.pnas.org/doi/10.1073/pnas.2008307117)
-    on the width of transition path time distributions for *Markovian* models, and this bound is violated by the observed long tails. 
-    This implied that the use of the [one-dimensional diffusion model](https://www.science.org/doi/10.1126/science.aad0637)
-    to interpret dynamics of protein folding in single molecule experiments is unjustified.
-
-    I am originally from New Delhi, India, and I currently live in the SF Bay Area, CA. I like
-    playing tennis and chess, reading philosophy, and going on hikes with my wife and dog.
-  </p>
-</section>
-
-<section class="blog">
-  <h2>Recent Blog Posts</h2>
-  <ul>
-    {% for post in site.posts %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a> - <em>{{ post.date | date: "%B %d, %Y" }}</em>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
