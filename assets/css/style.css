@@ -35,6 +35,34 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Hide navigation elements */
+.site-nav,
+.nav-trigger,
+.nav-trigger-label,
+.nav-trigger-icon,
+.nav-trigger-icon::before,
+.nav-trigger-icon::after {
+  display: none !important;
+}
+
+/* Minimal header */
+.site-header {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--background-primary);
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.site-title:hover {
+  color: var(--accent-color);
+}
+
 /* Container */
 .container {
   max-width: 1200px;
