@@ -70,7 +70,9 @@ The interesting part is that the "overfit" model does not perform poorly -- in f
 
 ### Through the Lenz of Statistical Physics
 
-Another way to look at dynamics of neural network training could be through the lens of the Lenz-Ising Model or, as it is more commonly known as, the Ising Model.[^4] Ising Model is mainly a mathematical object that doesn't correspond exactly to any physical system, but its properties have made it a popular tool for [pedagogical statistical physics](https://farside.ph.utexas.edu/teaching/329/lectures/node110.html). In a nutshell, Ising model refers to a lattice in *d* dimensions where each vertex $$s_i$$ can have two identities -- $$s_i = +1$$ or $$s_i = -1$$, i.e. spin up or down. These spins can be influenced by an external magnetic field $$h$$ or via local interactions between neighboring vertices, with the interaction strength $$J_{i,j}$$. Thus, the Hamiltonian of an Ising model can be written as:
+Another way to look at dynamics of neural network training could be through the lens of the Lenz-Ising Model or, as it is more commonly known as, the Ising Model.[^4] Ising Model is mainly a mathematical object that doesn't correspond exactly to any physical system, but its properties have made it a popular tool for [pedagogical statistical physics](https://farside.ph.utexas.edu/teaching/329/lectures/node110.html).
+
+In a nutshell, Ising model refers to a lattice in *d* dimensions where each vertex $$s_i$$ can have two identities: $$s_i = +1$$ or $$s_i = -1$$, i.e. spin up or down. These spins can be influenced by an external magnetic field $$h$$ or via local interactions between neighboring vertices, with the interaction strength $$J_{i,j}$$. Thus, the Hamiltonian of an Ising model can be written as:
 
 <div id="eq2">
 $$
@@ -106,7 +108,7 @@ A curious observation here is the change in the slope of graph observed in case 
 
 ## Conclusion and Next steps
 
-Training a GPT model is easier than you might think. For me, the most satisfying outcome was observing very reasonable performance of a model that can be fully defined and trained in a couple hundred lines of code in ~30mins or so on a local macbook with a GPU.
+Training a GPT model is easier than you might think. For me, the most satisfying outcome was observing very reasonable performance of a model that can be fully defined and trained using a couple hundred lines of code in ~30mins or so on a local macbook with a GPU.
 
 Statistical physics models, such as the Ising model, have been an inspiration for AI from the very beginning.[^9] Their principles offer opportunities to probe the dynamics of modern LLMs to improve them and, further, remove their infamous "blackbox" image.
 
