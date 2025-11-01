@@ -22,44 +22,43 @@ layout: default
       <a href="https://x.com/rohitium" aria-label="X (Twitter)">X (Twitter)</a>
       <a href="https://scholar.google.com/citations?user=yjeD2nkAAAAJ&hl=en&oi=ao" aria-label="Google Scholar">Google Scholar</a>
       <a href="https://www.producthunt.com/@rohitium" aria-label="Product Hunt">Product Hunt</a>
-      <a href="https://www.chess.com/member/kingofspades92" aria-label="Chess.com">Chess.com</a>
     </section>
   </section>
 
-  <!-- About Section -->
+  <!-- Current Leadership Section -->
   <section class="content-section">
-    <h2 class="section-title">About Me</h2>
+    <h2 class="section-title">Current Leadership</h2>
     <div class="intro">
       <p>
-        Hello! Welcome to my website. I enjoy working on projects that intersect natural sciences,
-        machine learning, and software development. Some of my recent projects include:
-        <ul>
-          <li>
-            <a href="https://www.medresearch.us">MedResearch</a> - A platform to democratize biomedical research and get evidence-based answers to serious medical questions.
-          </li>
-          <li>
-            <a href="https://rohitium.github.io/sarepta-fda-2025/">Sarepta FDA 2025 RAG Agent</a> - Chat with FDA documents, clinical studies, press reports, and SEC filings relevant to the Elevidys issue.
-          </li>
-          <li>
-            <a href="https://rohitium.github.io/target-dili-risk-score/">Drug Target DILI Risk Score</a> - A tool to predict the risk of drug-induced liver injury.
-          </li>
-        </ul>
+        I am the President & CEO of <a href="https://ethnc.ai/">ETHNIC AI, Inc.</a>, building medical superintelligence that expands access to trustworthy clinical insights.
       </p>
-      
       <p>
-        I am originally from New Delhi, India, and I currently live in the SF Bay Area, CA. I like
-        playing tennis and chess, reading philosophy, and going on hikes with my wife and dog.
+        I also contribute to HIV drug resistance research with collaborators at the Stanford School of Medicine, helping translate advanced modeling work into decisions that matter for patients.
       </p>
     </div>
   </section>
 
-  <!-- Experience Section -->
+  <!-- Blog Section -->
+  <section class="content-section blog">
+    <h2 class="section-title">Recent Writing</h2>
+    <p class="intro">
+      Essays and notes on biotechnology, computation, and other questions I am curious about.
+    </p>
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - <em>{{ post.date | date: "%B %d, %Y" }}</em>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <!-- Previous Experience Section -->
   <section class="content-section">
-    <h2 class="section-title">Experience</h2>
+    <h2 class="section-title">Previous Experience</h2>
     <div class="intro">
       <p>
-        I have more than 10 years of professional experience across industry and academia.
-        Most recently, I was a Computational Biologist at <a href="https://pivotallifesciences.com/">Pivotal Life Sciences</a>, an 
+        Previously, I was a Computational Biologist at <a href="https://pivotallifesciences.com/">Pivotal Life Sciences</a>, an 
         early-stage therapeutics-focused biotech Venture Capital firm. At Pivotal, I
         was part of the AI and Data Intelligence team, building an internal AI platform
         for due dilligence and NewCo creation. My primary contributions were in developing
@@ -67,7 +66,7 @@ layout: default
       </p>
 
       <p>
-        Previously, I was a Multiscale Modeling Researcher at <a href="https://www.gene.com/">Genentech</a>, where I developed
+        Before Pivotal, I was a Multiscale Modeling Researcher at <a href="https://www.gene.com/">Genentech</a>, where I developed
         a computational workflow for predicting protein-protein and protein-drug interaction
         kinetics using <a href="https://www.nature.com/articles/s41586-021-03819-2">Alphafold</a>, 
         <a href="https://github.com/openmm/openmm">Molecular Dynamics simulations</a>,
@@ -106,15 +105,27 @@ layout: default
     </div>
   </section>
 
-  <!-- Blog Section -->
-  <section class="blog">
-    <h2>Recent Blog Posts</h2>
-    <ul>
-      {% for post in site.posts %}
+  <!-- Projects & Interests Section -->
+  <section class="content-section">
+    <h2 class="section-title">Projects & Interests</h2>
+    <div class="intro">
+      <p>
+        Outside ETHNIC AI, I explore projects at the intersection of natural sciences, machine learning, and software. Recent highlights include:
+      </p>
+      <ul>
         <li>
-          <a href="{{ post.url }}">{{ post.title }}</a> - <em>{{ post.date | date: "%B %d, %Y" }}</em>
+          <a href="https://www.medresearch.us">MedResearch</a> &mdash; A platform to democratize biomedical research and provide evidence-based answers to serious medical questions.
         </li>
-      {% endfor %}
-    </ul>
+        <li>
+          <a href="https://rohitium.github.io/sarepta-fda-2025/">Sarepta FDA 2025 RAG Agent</a> &mdash; Chat with FDA documents, clinical studies, press reports, and SEC filings relevant to the Elevidys issue.
+        </li>
+        <li>
+          <a href="https://rohitium.github.io/target-dili-risk-score/">Drug Target DILI Risk Score</a> &mdash; A tool to predict the risk of drug-induced liver injury.
+        </li>
+      </ul>
+      <p>
+        When I step away from work, you can usually find me on a tennis court, studying chess tactics, reading philosophy, or hiking in the Bay Area with my wife and dog.
+      </p>
+    </div>
   </section>
 </div>
